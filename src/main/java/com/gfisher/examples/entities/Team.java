@@ -1,11 +1,14 @@
 package com.gfisher.examples.entities;
 
+import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import java.util.Set;
 
 /**
  * Created by gfisher on 12/24/2015.
  */
+@Entity
 public class Team extends BaseEntity{
     private String headquarters;
     private String publicSupportLevel;
@@ -42,6 +45,7 @@ public class Team extends BaseEntity{
         this.teamLeader = teamLeader;
     }
 
+    @OneToOne
     private Superhero teamLeader;
     @OneToMany
     private Set<Superhero> teamMembers;

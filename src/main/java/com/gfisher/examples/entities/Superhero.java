@@ -1,12 +1,14 @@
 package com.gfisher.examples.entities;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import java.util.Set;
 
 /**
  * Created by gfisher on 12/24/2015.
  */
+@Entity
 public class Superhero extends BaseEntity{
     private String realName;
     private String originType;
